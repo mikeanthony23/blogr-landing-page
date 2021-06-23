@@ -1,16 +1,25 @@
 {
   "name": "blogr-landing-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "![readme-design](https://user-images.githubusercontent.com/82145849/122960884-6fe94800-d3b6-11eb-8507-788ab1abf100.png)",
   "default": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeanthony23/blogr-landing-page.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeanthony23/blogr-landing-page/issues"
+  },
+  "homepage": "https://github.com/mikeanthony23/blogr-landing-page#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
     "parcel": "^2.0.0-beta.3.1"
   }
 }
