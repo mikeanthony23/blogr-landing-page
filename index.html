@@ -19,57 +19,62 @@
 
 <body>
 
-  <header>
-    <nav>
-      <figure>
-        <img src="./src/images/logo.svg" alt="blogr logo">
+  <header class="header">
+    <figure class="header__background-cotainer"><img class="header__background" src="./src/images/bg-pattern-intro.svg"
+        alt="header background"></figure>
+    <nav class="nav">
+      <figure class="nav__logo-container">
+        <img class="nav__logo" src="./src/images/logo.svg" alt="blogr logo">
       </figure>
-      <ul>
-        <li>
-          <h4>Product</h4>
-          <ul>
-            <li><a href="">Overview</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">Marketplace</a></li>
-            <li><a href="">Features</a></li>
-            <li><a href="">Integrations</a></li>
+      <div class="nav__burger-menu-container"><img class="nav__burger-menu" src="./src/images/icon-hamburger.svg"
+          alt="menu bar">
+      </div>
+
+      <ul class="nav__list hidden">
+        <li class="nav__item">
+          <h4 class="product">Product</h4>
+          <ul class="product__list hidden">
+            <li class="product__item"><a class="product__link" href="">Overview</a></li>
+            <li class="product__item"><a class="product__link" href="">Pricing</a></li>
+            <li class="product__item"><a class="product__link" href="">Marketplace</a></li>
+            <li class="product__item"><a class="product__link" href="">Features</a></li>
+            <li class="product__item"><a class="product__link" href="">Integrations</a></li>
           </ul>
         </li>
-        <li>
-          <h4>Company</h4>
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Team</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Careers</a></li>
+        <li class="nav__item hidden">
+          <h4 class="company">Company</h4>
+          <ul class="company__list hidden">
+            <li class="company__item"><a class="company__link" href="">About</a></li>
+            <li class="company__item"><a class="company__link" href="">Team</a></li>
+            <li class="company__item"><a class="company__link" href="">Blog</a></li>
+            <li class="company__item"><a class="company__link" href="">Careers</a></li>
           </ul>
         </li>
-        <li>
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Newsletter</a></li>
-            <li><a href="">LinkedIn</a></li>
+        <li class="nav__item hidden">
+          <h4 class="connect">Connect</h4>
+          <ul class="connect__list hidden">
+            <li class="connect__item"><a class="connect__link" href="">Contact</a></li>
+            <li class="connect__item"><a class="connect__link" href="">Newsletter</a></li>
+            <li class="connect__item"><a class="connect__link" href="">LinkedIn</a></li>
           </ul>
         </li>
       </ul>
-      <ul>
-        <li><a href="">Login</a></li>
-        <li><a href="">Sign Up</a></li>
+      <ul class="nav__list hidden">
+        <li class="nav__item"><button class="button button--login">Login</button></li>
+        <li class="nav__item"><button class="button button--sign-up">Sign Up</button></li>
       </ul>
     </nav>
 
-    <div>
+    <div class="header__intro-message">
       <h1>A modern publishing platform</h1>
       <p>Grow your audience and build your online brand</p>
-      <button>Start for Free</button>
-      <button>Learn More</button>
+      <div class="buttons">
+        <button class="buttons__intro buttons__start">Start for Free</button>
+        <button class="buttons__intro buttons__learn">Learn More</button>
+      </div>
     </div>
+
   </header>
-
-
-
-
 
   <main>
 
@@ -78,7 +83,7 @@
       <h2>Designed for the future</h2>
 
       <figure>
-        <img src="./src/images/illustration-editor-mobile.svg" alt="">
+        <!-- <img src="./src/images/illustration-editor-mobile.svg" alt=""> -->
       </figure>
 
       <div>
@@ -99,7 +104,7 @@
 
       <div>
         <figure>
-          <img src="./src/images/illustration-phones.svg" alt="">
+          <!-- <img src="./src/images/illustration-phones.svg" alt=""> -->
         </figure>
         <h2>State of the Art Infrastructure</h2>
         <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
@@ -108,7 +113,7 @@
       </div>
 
       <figure>
-        <img src="./src/images/illustration-laptop-mobile.svg" alt="">
+        <!-- <img src="./src/images/illustration-laptop-mobile.svg" alt=""> -->
       </figure>
 
       <div>
@@ -130,7 +135,7 @@
   </main>
 
   <footer>
-    <figure><img src="./src/images/logo.svg" alt=""></figure>
+    <!-- <figure><img src="./src/images/logo.svg" alt=""></figure> -->
 
 
     <ul>
