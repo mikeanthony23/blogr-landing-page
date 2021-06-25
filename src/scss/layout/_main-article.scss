@@ -1,0 +1,89 @@
+@use '../abstracts/variables' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: powderblue;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5em 1em;
+  background-color: pink;
+  display: flex;
+
+  &__header {
+    margin: 1em 0;
+    font-size: 2rem;
+    align-self: center;
+    text-align: center;
+    font-family: $overpass;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  &__img-container {
+    display: flex;
+    align-items: center;
+    margin: 1.5em 0;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content-wrapper {
+    margin: 1em;
+  }
+
+  &__sub-header {
+    font-size: 1.8rem;
+    font-family: $overpass;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+
+  &__header--phone {
+    color: $white;
+  }
+
+  &__msg {
+    font-size: $pri-font-size;
+    letter-spacing: 0.5px;
+    font-family: $overpass;
+    font-weight: 600;
+    color: $very-dark-grayish-blue;
+    text-align: center;
+    line-height: 1.8;
+    margin: 0.5em 0;
+  }
+
+  &__msg--phone {
+    color: $white;
+    font-weight: 300;
+  }
+
+  &__img-container--phone {
+    margin-top: 4em;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1000;
+    &::after {
+      z-index: -1;
+      position: absolute;
+      content: url('/src/images/bg-pattern-circles.svg');
+      background-image: linear-gradient(
+        162deg,
+        rgba(44, 45, 63, 1) 13%,
+        rgba(63, 65, 100, 1) 98%
+      );
+      background-position: left;
+      transform: scale(0.5);
+      height: 1250px;
+      margin-left: -250px;
+    }
+  }
+}
