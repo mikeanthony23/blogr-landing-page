@@ -103,15 +103,15 @@
   }
 
   &__sub-list-item {
-    margin: 1em;
+    margin: 1.5em;
   }
 
   &__sub-list-link {
-    color: $text-color;
+    color: $nav-color;
   }
 
   &__login-signup {
-    border-top: solid 1px $text-color;
+    border-top: solid 1px $nav-color;
     margin: -1em 1.5em;
     padding: 1em;
     display: flex;
@@ -121,6 +121,10 @@
   &__item-account {
     margin: 1em;
   }
+}
+
+details[open] {
+  color: $nav-color;
 }
 
 .log-in-link {
@@ -177,17 +181,30 @@
     border-radius: 2em;
     width: 9rem;
     border: solid 1px $white;
+    cursor: pointer;
+    &:active {
+      transform: scale(0.96);
+    }
   }
 
   &__start {
     color: $light-red;
-    background-color: $white;
+    &:hover {
+      border-color: $light-gray;
+      background-color: $very-light-red;
+      color: $white;
+      border-color: $very-light-red;
+    }
   }
 
   &__learn {
     border-color: $light-gray;
     background-color: unset;
     color: $white;
+    &:hover {
+      color: $light-red;
+      background-color: $white;
+    }
   }
 }
 
