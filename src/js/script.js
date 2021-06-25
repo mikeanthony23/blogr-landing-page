@@ -1,11 +1,13 @@
 'use strict';
+import { func } from 'assert-plus';
+import 'core-js/stable';
 
 const menuBtn = document.querySelector('.nav__burger-menu');
 const navList = document.querySelector('.nav__list');
 const overlay = document.querySelector('.overlay');
 
 const navHeader = document.querySelectorAll('.nav__item-header');
-const navSubListLinks = document.querySelector('.nav__sub-list');
+const redArrowIcon = document.querySelectorAll('.arrow-icon');
 
 const togglers = function () {
   menuBtn.classList.toggle('open');
@@ -34,3 +36,15 @@ const closeMenuOverlay = function () {
   });
 };
 closeMenuOverlay();
+
+const rotateArrow = function () {
+  const header = Array.from(navHeader);
+  header.forEach((el, i) => {
+    el.addEventListener('click', function (e) {
+      const btn = e.target.closest('.nav__item-header');
+      if (!btn) return;
+      Array.from(redArrowIcon)[i].classList.toggle('rotate');
+    });
+  });
+};
+rotateArrow();

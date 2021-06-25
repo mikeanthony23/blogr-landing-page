@@ -37,28 +37,6 @@
     height: 100%;
     z-index: -100;
   }
-
-  &__intro-message {
-    grid-area: intro;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 4em 2.5em;
-    font-family: $overpass;
-    color: $white;
-    z-index: 1;
-    & h1 {
-      text-align: center;
-      font-weight: 600;
-    }
-
-    & p {
-      margin: 0.5em;
-      text-align: center;
-      color: $light-gray;
-    }
-  }
 }
 
 .nav {
@@ -110,11 +88,11 @@
     padding: 0;
   }
 
-  &__item-header::after {
+  & span {
     position: absolute;
     content: url('/src/images/icon-arrow-dark.svg');
-    margin-left: 5px;
-    margin-top: -2px;
+    margin-left: 7px;
+    margin-top: 6px;
   }
 
   &__sub-list {
@@ -161,6 +139,28 @@
   cursor: pointer;
 }
 
+.intro-message {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 2.5em;
+  font-family: $overpass;
+  color: $white;
+  z-index: 1;
+  & h1 {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  & p {
+    margin: 0.5em;
+    text-align: center;
+    color: $light-gray;
+  }
+}
+
 .buttons {
   display: flex;
   flex-direction: row;
@@ -204,4 +204,8 @@
   background: pink;
   opacity: 0;
   z-index: 800;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }
