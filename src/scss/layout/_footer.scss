@@ -1,0 +1,52 @@
+@use "../abstracts/abstractsIndex" as *;
+
+.footer {
+  background: $very-dark-black-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 6em;
+
+  &__wrapper {
+    margin: 0.5em;
+    margin-top: 3em;
+  }
+
+  &__logo-container {
+    width: auto;
+    transform: scale(0.45);
+  }
+
+  &__logo {
+    width: 100%;
+  }
+}
+
+.footer-nav {
+  margin: 3em;
+
+  &__header {
+    color: $white;
+    font-family: $overpass;
+    text-align: center;
+    margin: 2em;
+    margin-top: 3em;
+  }
+
+  &__header--product {
+    margin-top: -1em;
+  }
+}
+
+.footer-header-nav {
+  &__items {
+    text-align: center;
+    margin: 0.5em;
+  }
+
+  &__links {
+    color: $grayish-blue;
+    font-family: $overpass;
+    font-weight: 600;
+  }
+}
