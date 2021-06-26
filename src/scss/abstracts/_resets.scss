@@ -8,6 +8,6 @@
   list-style: none;
 }
 
-summary::marker {
+summary > ::marker {
   display: none;
 }
