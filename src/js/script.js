@@ -1,6 +1,8 @@
 'use strict';
 import { func } from 'assert-plus';
 import 'core-js/stable';
+import iconBurger from 'url:../images/icon-hamburger.svg';
+import iconClose from 'url:../images/icon-close.svg';
 
 const menuBtn = document.querySelector('.nav__burger-menu');
 const navList = document.querySelector('.nav__list');
@@ -19,10 +21,12 @@ const openCloseMenu = function () {
   menuBtn.addEventListener('click', function (e) {
     const btn = e.target.closest('.nav__burger-menu');
     if (!btn) return;
+    console.log(btn.src);
     togglers();
+
     return btn.classList.contains('open')
-      ? (btn.src = '/icon-hamburger.daad064d.svg')
-      : (btn.src = '/icon-close.14c7d256.svg');
+      ? (btn.src = `${iconBurger}`)
+      : (btn.src = `${iconClose}`);
   });
 };
 openCloseMenu();
@@ -32,7 +36,7 @@ const closeMenuOverlay = function () {
     const btn = e.target.closest('.overlay');
     if (!btn) return;
     togglers();
-    return (menuBtn.src = '/icon-hamburger.daad064d.svg');
+    return (menuBtn.src = `${iconBurger}`);
   });
 };
 closeMenuOverlay();
