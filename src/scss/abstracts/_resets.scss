@@ -8,6 +8,7 @@
   list-style: none;
 }
 
-details > summary::marker {
-  display: none;
+summary {
+  width: 100px;
+  margin: auto;
 }
