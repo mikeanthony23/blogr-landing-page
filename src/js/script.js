@@ -26,8 +26,8 @@ const openCloseMenu = function () {
     togglers();
 
     return btn.classList.contains('open')
-      ? (btn.src = `.${iconBurger}`)
-      : (btn.src = `.${iconClose}`);
+      ? (btn.src = `${iconBurger}`)
+      : (btn.src = `${iconClose}`);
   });
 };
 openCloseMenu();
