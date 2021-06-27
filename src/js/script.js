@@ -3,6 +3,7 @@ import { func } from 'assert-plus';
 import 'core-js/stable';
 import iconBurger from 'url:../images/icon-hamburger.svg';
 import iconClose from 'url:../images/icon-close.svg';
+console.log(iconBurger);
 
 const menuBtn = document.querySelector('.nav__burger-menu');
 const navList = document.querySelector('.nav__list');
@@ -25,8 +26,8 @@ const openCloseMenu = function () {
     togglers();
 
     return btn.classList.contains('open')
-      ? (btn.src = `${iconBurger}`)
-      : (btn.src = `${iconClose}`);
+      ? (btn.src = `.${iconBurger}`)
+      : (btn.src = `.${iconClose}`);
   });
 };
 openCloseMenu();
