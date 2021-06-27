@@ -127,6 +127,12 @@ details[open] {
   color: $nav-color;
 }
 
+summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .log-in-link {
   cursor: pointer;
 }
