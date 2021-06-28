@@ -47,6 +47,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  // overflow: hidden;
 
   &__logo {
     cursor: pointer;
@@ -60,6 +61,7 @@
   }
 
   &__list {
+    display: flex;
     position: absolute;
     top: 8em;
     left: 1.5em;
@@ -72,6 +74,19 @@
     background-color: $white;
     border-radius: 0.3em;
     z-index: 1000;
+    animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @keyframes scale-in-tr {
+      0% {
+        transform: scale(0);
+        transform-origin: 100% 0%;
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        transform-origin: 100% 0%;
+        opacity: 1;
+      }
+    }
   }
 
   &__item {
@@ -91,8 +106,9 @@
   & span {
     position: absolute;
     content: url('/src/images/icon-arrow-dark.svg');
-    margin-left: 7px;
-    margin-top: 6px;
+    margin-left: -1px;
+    margin-top: 2px;
+    padding: 5px;
   }
 
   &__sub-list {
@@ -123,8 +139,14 @@
   }
 }
 
+details {
+  max-height: 100px;
+  transition: all 350ms ease-out;
+}
+
 details[open] {
   color: $nav-color;
+  max-height: 300px;
 }
 
 summary {
@@ -214,6 +236,10 @@ summary {
   }
 }
 
+/***
+classes added/triggered by javascript
+***/
+
 .hidden {
   display: none;
 }
@@ -231,4 +257,5 @@ summary {
 
 .rotate {
   transform: rotate(180deg);
+  transition: all 200ms ease-out;
 }
