@@ -23,8 +23,8 @@ const openCloseMenu = function () {
     if (!btn) return;
     navTogglers();
     return btn.classList.contains('open-nav')
-      ? (btn.src = `${iconClose}`)
-      : (btn.src = `${iconBurger}`);
+      ? (btn.src = `${iconBurger}`)
+      : (btn.src = `${iconClose}`);
   });
 };
 openCloseMenu();
