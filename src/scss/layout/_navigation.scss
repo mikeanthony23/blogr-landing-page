@@ -141,12 +141,12 @@
 
 details {
   max-height: 100px;
-  transition: all 350ms ease-out;
+  transition: all 550ms ease-out;
 }
 
 details[open] {
   color: $nav-color;
-  max-height: 300px;
+  max-height: 500px;
 }
 
 summary {
