@@ -61,7 +61,7 @@
   }
 
   &__img-container--illustration {
-    margin-bottom: -0.5em;
+    margin-bottom: -0.3em;
   }
 
   &__content-wrapper--robust {
@@ -70,7 +70,8 @@
 
   &__header--phone {
     color: $white;
-    margin-top: 1.5em;
+    margin: 1.5em 2em 1.5em 2em;
+    // margin-top: 1.5em;
   }
 
   &__img-container--phone {
@@ -110,7 +111,7 @@
   &__msg--phone {
     color: $white;
     font-weight: 300;
-    margin: -0.5em 1.2em 0 1.2em;
+    margin: -0.5em 2em 0 2em;
   }
 
   &__img-container--laptop {

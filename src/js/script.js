@@ -3,7 +3,6 @@ import { func } from 'assert-plus';
 import 'core-js/stable';
 import iconBurger from 'url:../images/icon-hamburger.svg';
 import iconClose from 'url:../images/icon-close.svg';
-console.log(iconBurger);
 
 const menuBtn = document.querySelector('.nav__burger-menu');
 const navList = document.querySelector('.nav__list');
@@ -12,8 +11,8 @@ const overlay = document.querySelector('.overlay');
 const navHeader = document.querySelectorAll('.nav__item-header');
 const redArrowIcon = document.querySelectorAll('.arrow-icon');
 
-const togglers = function () {
-  menuBtn.classList.toggle('open');
+const navTogglers = function () {
+  menuBtn.classList.toggle('open-nav');
   navList.classList.toggle('hidden');
   overlay.classList.toggle('hidden');
 };
@@ -22,10 +21,8 @@ const openCloseMenu = function () {
   menuBtn.addEventListener('click', function (e) {
     const btn = e.target.closest('.nav__burger-menu');
     if (!btn) return;
-    console.log(btn.src);
-    togglers();
-
-    return btn.classList.contains('open')
+    navTogglers();
+    return btn.classList.contains('open-nav')
       ? (btn.src = `${iconBurger}`)
       : (btn.src = `${iconClose}`);
   });
@@ -36,7 +33,7 @@ const closeMenuOverlay = function () {
   overlay.addEventListener('click', function (e) {
     const btn = e.target.closest('.overlay');
     if (!btn) return;
-    togglers();
+    navTogglers();
     return (menuBtn.src = `${iconBurger}`);
   });
 };
