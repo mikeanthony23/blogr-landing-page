@@ -1,4 +1,4 @@
-// colors
+// COLORS
 
 // primary
 $light-red: hsl(356, 100%, 66%); //(CTA text)
@@ -14,7 +14,7 @@ $very-dark-black-blue: hsl(240, 10%, 16%); //(footer background)
 $light-gray: hsla(0, 0%, 96%, 0.801);
 $dark-gray: rgb(239, 239, 241);
 
-$nav-color: #6c7e91;
+$nav-color: hsl(211, 15%, 50%);
 
 //gradient
 
@@ -23,12 +23,13 @@ $very-light-red2: hsl(13, 100%, 72%);
 $light-red: hsl(353, 100%, 62%);
 
 // Background gradient - body:
-$very-dark-gray-blue: #2c2d3f;
-$very-dark-desaturated-blue: #3f4164;
+$very-dark-gray-blue: hsl(237, 18%, 21%);
+$very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+//FONTS
 
 // font size
 $pri-font-size: 1rem;
 
 // font family
-$ubuntu: 'Ubuntu', sans-serif;
 $overpass: 'Overpass', sans-serif;
