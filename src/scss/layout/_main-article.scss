@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/abstractsIndex' as *;
 
 // .main {
 
@@ -12,6 +12,15 @@
   width: 100%;
   display: flex;
   overflow: hidden;
+  @include media($bp-medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'header header'
+      'design-text design-img'
+      'state-text state-img'
+      'laptop-img laptop-text';
+  }
 
   &__header {
     margin: 2em 0;
@@ -60,8 +69,23 @@
     color: $very-dark-grayish-blue;
   }
 
+  &__header--illustration {
+    @include media($bp-medium) {
+      grid-area: header;
+    }
+  }
+
   &__img-container--illustration {
     margin-bottom: 2em;
+    @include media($bp-medium) {
+      grid-area: design-img;
+    }
+  }
+
+  &__content-wrapper--editor-robust {
+    @include media($bp-medium) {
+      grid-area: design-text;
+    }
   }
 
   &__content-wrapper--robust {
@@ -81,6 +105,9 @@
     margin-bottom: -11em;
     position: relative;
     z-index: 900;
+    @include media($bp-medium) {
+      grid-area: state-img;
+    }
   }
 
   &__content-wrapper--phone {
@@ -97,6 +124,9 @@
     z-index: 800;
     overflow: hidden;
     margin-bottom: 6em;
+    @include media($bp-medium) {
+      grid-area: state-text;
+    }
     &::after {
       z-index: -1;
       position: absolute;
@@ -119,11 +149,20 @@
   &__img-container--laptop {
     width: 100%;
     margin-bottom: 2.5em;
+    @include media($bp-medium) {
+      grid-area: laptop-img;
+    }
   }
 
   &__img--laptop {
     width: 100%;
     transform: scale(1.3);
+  }
+
+  &__content-wrapper--laptop {
+    @include media($bp-medium) {
+      grid-area: laptop-text;
+    }
   }
 
   &__msg--powerful {

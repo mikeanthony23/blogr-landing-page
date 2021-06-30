@@ -23,7 +23,8 @@
       rgba(255, 107, 100, 1) 32%,
       rgba(255, 61, 84, 1) 94%
     );
-    margin-bottom: 5em;
+    margin-bottom: 3em;
+    padding-bottom: 3em;
   }
 
   &::after {
@@ -47,7 +48,7 @@
     @include media($bp-large) {
       transform: scale(5.2);
       top: -7em;
-      left: 51em;
+      left: 52em;
       max-width: 550px;
     }
   }
@@ -64,7 +65,11 @@
   z-index: 2000;
 
   @include media($bp-large) {
-    padding: 4em 10.5em;
+    padding: 3em 10.5em;
+    justify-content: center;
+    text-content: center;
+    position: static;
+    margin: auto;
   }
 
   &__logo {
@@ -76,6 +81,9 @@
   &__burger-menu-container {
     cursor: pointer;
     z-index: 1000;
+    @include media($bp-large) {
+      display: none;
+    }
   }
 
   &__list {
@@ -104,11 +112,15 @@
     font-family: $overpass;
     font-weight: 600;
     color: $very-dark-blue;
+    @include media($bp-medium) {
+      margin: 0 2em;
+      color: $light-gray;
+    }
   }
 
   &__item-header {
     cursor: pointer;
-    margin: 0;
+    margin-top: -0.5em;
     padding: 0;
   }
 
@@ -118,6 +130,9 @@
     margin-left: -1px;
     margin-top: 2px;
     padding: 5px;
+    @include media($bp-large) {
+      content: url('/src/images/icon-arrow-light.svg');
+    }
   }
 
   &__sub-list {
@@ -161,7 +176,6 @@ details[open] {
 summary {
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .log-in-link {
@@ -178,6 +192,10 @@ summary {
   border-radius: 1.8em;
   color: $white;
   cursor: pointer;
+  @include media($bp-large) {
+    background: $white;
+    color: $light-red;
+  }
 }
 
 .intro-message {
@@ -191,7 +209,7 @@ summary {
   color: $white;
   z-index: 700;
   @include media($bp-large) {
-    margin: 4.2em 2em;
+    margin: 5em 2em;
   }
   & h1 {
     text-align: center;
@@ -220,12 +238,13 @@ summary {
 .buttons {
   display: flex;
   flex-direction: row;
+  margin-top: 0.5em;
 
   &__intro {
     margin: 1.5em 0.5em;
     font-size: 1rem;
     font-weight: 600;
-    padding: 0.8em 1.3em;
+    padding: 1em 1.5em;
     border-radius: 2em;
     border: solid 1px $white;
     cursor: pointer;
@@ -236,6 +255,7 @@ summary {
 
   &__start {
     color: $light-red;
+    background-color: $white;
     &:hover {
       border-color: $light-gray;
       background-color: $very-light-red;
@@ -255,12 +275,11 @@ summary {
   }
 }
 
-/***
-classes added/triggered by javascript
-***/
-
 .hidden {
   display: none;
+  @include media($bp-large) {
+    display: flex;
+  }
 }
 
 .overlay {
@@ -272,6 +291,9 @@ classes added/triggered by javascript
   background: pink;
   opacity: 0;
   z-index: 800;
+  @include media($bp-large) {
+    display: none;
+  }
 }
 
 .rotate {
