@@ -117,10 +117,28 @@
     }
   }
 
+  &__content-wrapper--phone {
+    @include media($bp-large) {
+      transform: translateY(-5em);
+      border-top-right-radius: 5em;
+      border-bottom-left-radius: 5em;
+      background-image: linear-gradient(
+        162deg,
+        rgba(44, 45, 63, 1) 13%,
+        rgba(63, 65, 100, 1) 98%
+      );
+      position: relative;
+      z-index: 800;
+    }
+  }
+
   &__header--phone {
     color: $white;
     font-size: 2.5rem;
     line-height: 1.2;
+    @include media($bp-large) {
+      transform: translate(7.7em, 2em);
+    }
   }
 
   &__img-container--phone {
@@ -128,13 +146,22 @@
     margin-bottom: -13em;
     position: relative;
     z-index: 900;
+    @include media($bp-large) {
+      position: absolute;
+      transform: scale(1) translate(-18em, -8em);
+    }
   }
 
-  &__msg-wrapper--phone {
+  &__img--phone {
+    @include media($bp-large) {
+    }
+  }
+
+  &__text-content-wrapper--phone {
     border-top-right-radius: 5em;
     border-bottom-left-radius: 5em;
     padding: 10em 0;
-    padding-bottom: 8.5rem;
+    padding-bottom: 7.5rem;
     background-image: linear-gradient(
       162deg,
       rgba(44, 45, 63, 1) 13%,
@@ -144,6 +171,28 @@
     z-index: 800;
     overflow: hidden;
     margin-bottom: 6em;
+
+    @include media($bp-large) {
+      border: unset;
+      // padding: 10em 0;
+      // padding-bottom: 8.5rem;
+      padding: 0;
+      background-image: linear-gradient(
+        162deg,
+        rgba(44, 45, 63, 1) 13%,
+        rgba(63, 65, 100, 1) 98%
+      );
+      position: relative;
+      z-index: 800;
+      overflow: hidden;
+      // margin-bottom: 6em;
+      margin: 0;
+      background: unset;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &::after {
       z-index: -1;
@@ -155,6 +204,9 @@
       display: flex;
       justify-content: center;
       width: 100%;
+      @include media($bp-large) {
+        transform: translate(-26em, -2em);
+      }
     }
   }
 
@@ -162,6 +214,12 @@
     color: $white;
     font-weight: 300;
     margin: 0 1.5em;
+    @include media($bp-large) {
+      transform: translate(45em, -1.5em);
+      margin-right: 50em;
+      padding: 5em 0;
+      padding-bottom: 6em;
+    }
   }
 
   &__img-container--laptop {
