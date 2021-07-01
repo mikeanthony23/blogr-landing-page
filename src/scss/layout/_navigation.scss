@@ -6,7 +6,7 @@
   background: linear-gradient(132deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   padding-top: 1em;
   padding-bottom: 5.5em;
-  // margin-bottom: 2em;
+  margin-bottom: 2em;
   border-bottom-left-radius: 6em;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -67,9 +67,17 @@
   @include media($bp-large) {
     padding: 3em 10.5em;
     justify-content: center;
-    text-content: center;
     position: static;
     margin: auto;
+    padding: 0;
+    width: 1000px;
+  }
+
+  &__logo-container {
+    @include media($bp-large) {
+      margin: 0 4em;
+      transform: translateX(-10em);
+    }
   }
 
   &__logo {
@@ -104,6 +112,20 @@
     margin: auto;
     box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 1);
     animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @include media($bp-large) {
+      position: static;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      max-width: unset;
+      box-shadow: unset;
+      border-radius: unset;
+      background-color: unset;
+      align-items: center;
+      justify-content: center;
+      margin-left: -13em;
+    }
   }
 
   &__item {
@@ -112,7 +134,7 @@
     font-family: $overpass;
     font-weight: 600;
     color: $very-dark-blue;
-    @include media($bp-medium) {
+    @include media($bp-large) {
       margin: 0 2em;
       color: $light-gray;
     }
@@ -122,6 +144,14 @@
     cursor: pointer;
     margin-top: -0.5em;
     padding: 0;
+    @include media($bp-large) {
+      color: rgb(233, 230, 230);
+      &:hover {
+        color: $white;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
+    }
   }
 
   & span {
@@ -140,14 +170,32 @@
     padding: 0.5em;
     margin: 1em 1.5em;
     background-color: $dark-gray;
+    @include media($bp-large) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 1em 0;
+      margin: 1.5em 0;
+      width: 130px;
+      background-color: $white;
+      transform: translateX(-1em);
+    }
   }
 
   &__sub-list-item {
     margin: 1.5em;
+    @include media($bp-large) {
+      margin: 0.5em 2em;
+    }
   }
 
   &__sub-list-link {
     color: $nav-color;
+    @include media($bp-large) {
+      color: $very-dark-blue;
+      margin-left: -1em;
+    }
   }
 
   &__login-signup {
@@ -156,6 +204,17 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
+    @include media($bp-large) {
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5em;
+      margin-right: -10em;
+      margin-top: 5px;
+    }
   }
 
   &__item-account {
@@ -166,16 +225,28 @@
 details {
   max-height: 100px;
   transition: all 550ms ease-out;
+  @include media($bp-large) {
+    max-height: 0;
+    height: 0;
+    padding: 0;
+    width: 70px;
+  }
 }
 
 details[open] {
   color: $nav-color;
   max-height: 500px;
+  @include media($bp-large) {
+    max-height: 0;
+    height: 0;
+    padding: 0;
+  }
 }
 
 summary {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .log-in-link {
@@ -195,6 +266,11 @@ summary {
   @include media($bp-large) {
     background: $white;
     color: $light-red;
+    background-color: $white;
+    &:hover {
+      color: $white;
+      background-color: $very-light-red;
+    }
   }
 }
 
@@ -277,9 +353,9 @@ summary {
 
 .hidden {
   display: none;
-  // @include media($bp-large) {
-  //   display: flex;
-  // }
+  @include media($bp-large) {
+    display: flex;
+  }
 }
 
 .overlay {
