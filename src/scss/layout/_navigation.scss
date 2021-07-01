@@ -277,9 +277,9 @@ summary {
 
 .hidden {
   display: none;
-  @include media($bp-large) {
-    display: flex;
-  }
+  // @include media($bp-large) {
+  //   display: flex;
+  // }
 }
 
 .overlay {

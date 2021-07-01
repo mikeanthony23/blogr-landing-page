@@ -1,8 +1,9 @@
 @use '../abstracts/abstractsIndex' as *;
 
-// .main {
-
-// }
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
 .article {
   display: flex;
@@ -12,20 +13,36 @@
   display: flex;
   overflow: hidden;
   // background-color: crimson;
-  @include media($bp-medium) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      'header header'
-      'design-text design-img'
-      'state-text state-img'
-      'laptop-img laptop-text';
+  @include media($bp-large) {
+    margin-top: 1em;
   }
 
   &__content-wrapper {
     // background-color: cornflowerblue;
     &:last-child {
       padding-bottom: 4em;
+    }
+    @include media($bp-large) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__content-wrapper--intro {
+    @include media($bp-large) {
+      // padding: 3em;
+      transform: translateY(-10em);
+      margin: 0 10em;
+      // background-color: darkgray;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'text image';
+      justify-content: center;
+      align-items: center;
+      // & > * {
+      //   padding: 2.5em;
+      // }
     }
   }
 
@@ -39,19 +56,17 @@
     font-weight: 600;
     line-height: 1.5;
     color: $very-dark-blue;
+    @include media($bp-large) {
+      font-size: 2.5rem;
+      margin-top: 1.5em;
+      padding: 0;
+    }
   }
 
   &__img-container {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
-  }
-
-  &__img {
-    width: 100%;
-  }
-
-  &__text-content-wrapper {
   }
 
   &__sub-header {
@@ -62,6 +77,10 @@
     margin: 0.5em;
     color: $very-dark-blue;
     padding: 0.3em;
+    @include media($bp-large) {
+      text-align: left;
+      margin: 0.8em;
+    }
   }
 
   &__msg {
@@ -74,27 +93,34 @@
     line-height: 1.8;
     color: $very-dark-grayish-blue;
     margin: 2em;
-  }
-
-  &__header--illustration {
-    @include media($bp-medium) {
-      grid-area: header;
+    @include media($bp-large) {
+      text-align: left;
     }
   }
 
   &__img-container--illustration {
     margin-bottom: 2em;
-    @include media($bp-medium) {
-      grid-area: design-img;
+    @include media($bp-large) {
+      & img {
+        content: url('/src/images/illustration-editor-desktop.svg');
+      }
+      margin-bottom: 0;
+      grid-area: image;
+      margin-right: -25em;
+    }
+  }
+
+  &__text-content-wrapper--intro {
+    @include media($bp-large) {
+      grid-area: text;
+      margin-top: 4em;
     }
   }
 
   &__header--phone {
     color: $white;
-    // margin: 1.5em 1em;
     font-size: 2.5rem;
     line-height: 1.2;
-    // margin-top: 1.5em;
   }
 
   &__img-container--phone {
@@ -102,16 +128,6 @@
     margin-bottom: -13em;
     position: relative;
     z-index: 900;
-    @include media($bp-medium) {
-      grid-area: state-img;
-      background-image: linear-gradient(
-        162deg,
-        rgba(44, 45, 63, 1) 13%,
-        rgba(63, 65, 100, 1) 98%
-      );
-      margin-bottom: 0;
-      margin-top: -1.9em;
-    }
   }
 
   &__msg-wrapper--phone {
@@ -128,9 +144,7 @@
     z-index: 800;
     overflow: hidden;
     margin-bottom: 6em;
-    @include media($bp-medium) {
-      grid-area: state-text;
-    }
+
     &::after {
       z-index: -1;
       position: absolute;
@@ -153,9 +167,6 @@
   &__img-container--laptop {
     width: 100%;
     margin-bottom: 2.5em;
-    @include media($bp-medium) {
-      grid-area: laptop-img;
-    }
   }
 
   &__img--laptop {
