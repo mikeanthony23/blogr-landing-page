@@ -6,15 +6,49 @@
   flex-direction: column;
   align-items: center;
   border-top-right-radius: 6em;
+  @include media($bp-medium) {
+    margin-top: 2.5em;
+    padding: 1.5em 0;
+  }
+  @include media($bp-large) {
+    margin-top: 5em;
+    padding: 2.5em 0;
+  }
 
   &__wrapper {
     margin: 0.5em;
     margin-top: 3em;
+    @include media($bp-medium) {
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      transform: scale(1) translate(-1.3em, 0.5em);
+      transform: translate(0em);
+    }
+    @include media($bp-large) {
+      transform: translate(-5em);
+      margin: 0;
+      margin-top: 0.5em;
+
+      & > * {
+        margin: 5em;
+        margin-top: 0;
+      }
+    }
   }
 
   &__logo-container {
     width: auto;
     transform: scale(0.45);
+    @include media($bp-medium) {
+      transform: scale(1) translate(1em, 0.5em);
+      margin: 0;
+    }
+    @include media($bp-large) {
+      transform: scale(1) translate(-2.7em, 1em);
+      margin: 0;
+    }
   }
 
   &__logo {
@@ -24,6 +58,16 @@
 
 .footer-nav {
   margin: 3em;
+  @include media($bp-medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    transform: translate(1.75em, 0);
+  }
+  @include media($bp-large) {
+    margin: 0;
+    transform: translate(3.5em, 0.5em);
+  }
 
   &__header {
     color: $white;
@@ -31,6 +75,18 @@
     text-align: center;
     margin: 2em;
     margin-top: 3em;
+    @include media($bp-medium) {
+      margin: 0;
+      margin-bottom: 1em;
+      margin-top: 1em;
+      transform: translate(0.5em);
+    }
+    @include media($bp-large) {
+      margin: 0.5em;
+      margin-bottom: 2em;
+      margin-top: 2em;
+      transform: unset;
+    }
   }
 
   &__header--product {
@@ -39,14 +95,52 @@
 }
 
 .footer-header-nav {
+  @include media($bp-medium) {
+    margin: 0 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 2.5em;
+  }
+  @include media($bp-large) {
+    margin: 0 5em;
+    display: flex;
+  }
+
   &__items {
     text-align: center;
     margin: 0.5em;
+    @include media($bp-medium) {
+      text-align: left;
+    }
+    @include media($bp-large) {
+      text-align: left;
+    }
   }
 
   &__links {
     color: $grayish-blue;
     font-family: $overpass;
     font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.footer-header-nav--company {
+  @include media($bp-medium) {
+    transform: translate(0.5em);
+  }
+  @include media($bp-large) {
+    transform: translate(1em);
+  }
+}
+
+.footer-header-nav--connect {
+  @include media($bp-medium) {
+    transform: translate(1.75em);
+  }
+  @include media($bp-large) {
+    transform: translate(3.5em);
   }
 }
