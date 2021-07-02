@@ -1,7 +1,7 @@
 @use '../abstracts/abstractsIndex' as *;
 
 .main {
-  // max-width: 1400px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 
@@ -220,6 +220,7 @@
   &__content-wrapper--laptop {
     @include media($bp-large) {
       margin: 6em 0;
+      margin-bottom: 11em;
       display: flex;
       flex-direction: row;
       transform: translateY(4em);
