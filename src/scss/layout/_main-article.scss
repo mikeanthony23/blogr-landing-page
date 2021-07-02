@@ -1,7 +1,7 @@
 @use '../abstracts/abstractsIndex' as *;
 
 .main {
-  max-width: 1400px;
+  // max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -12,13 +12,11 @@
   width: 100%;
   display: flex;
   overflow: hidden;
-  // background-color: crimson;
   @include media($bp-large) {
     margin-top: 1em;
   }
 
   &__content-wrapper {
-    // background-color: cornflowerblue;
     &:last-child {
       padding-bottom: 4em;
     }
@@ -26,23 +24,6 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-    }
-  }
-
-  &__content-wrapper--intro {
-    @include media($bp-large) {
-      // padding: 3em;
-      transform: translateY(-10em);
-      margin: 0 10em;
-      // background-color: darkgray;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'text image';
-      justify-content: center;
-      align-items: center;
-      // & > * {
-      //   padding: 2.5em;
-      // }
     }
   }
 
@@ -58,8 +39,7 @@
     color: $very-dark-blue;
     @include media($bp-large) {
       font-size: 2.5rem;
-      margin-top: 1.5em;
-      padding: 0;
+      transform: translateY(1em);
     }
   }
 
@@ -79,7 +59,8 @@
     padding: 0.3em;
     @include media($bp-large) {
       text-align: left;
-      margin: 0.8em;
+      margin: 1em 0;
+      padding: 0;
     }
   }
 
@@ -95,30 +76,49 @@
     margin: 2em;
     @include media($bp-large) {
       text-align: left;
+      margin: 0;
+      padding-bottom: 2.5em;
     }
   }
 
-  &__img-container--illustration {
-    margin-bottom: 2em;
+  &__content-wrapper--intro {
     @include media($bp-large) {
-      & img {
-        content: url('/src/images/illustration-editor-desktop.svg');
-      }
-      margin-bottom: 0;
-      grid-area: image;
-      margin-right: -25em;
+      margin: 0 5em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 'text image';
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15em;
     }
   }
 
   &__text-content-wrapper--intro {
     @include media($bp-large) {
       grid-area: text;
-      margin-top: 4em;
+      transform: translate(2em, 1.5em);
+      margin: 0 3em;
+    }
+  }
+
+  &__img-container--illustration {
+    margin-bottom: 2em;
+    transform: scale(1);
+
+    @include media($bp-large) {
+      transform: scale(1.45) translateX(9.2em);
+      & img {
+        content: url('/src/images/illustration-editor-desktop.svg');
+      }
+      margin-bottom: 0;
+      grid-area: image;
+      // margin-right: -25em;
     }
   }
 
   &__content-wrapper--phone {
     @include media($bp-large) {
+      margin: 3em 0;
       transform: translateY(-5em);
       border-top-right-radius: 5em;
       border-bottom-left-radius: 5em;
@@ -137,7 +137,7 @@
     font-size: 2.5rem;
     line-height: 1.2;
     @include media($bp-large) {
-      transform: translate(7.7em, 2em);
+      transform: translate(7.9em, 2em);
     }
   }
 
@@ -148,7 +148,7 @@
     z-index: 900;
     @include media($bp-large) {
       position: absolute;
-      transform: scale(1) translate(-18em, -8em);
+      transform: scale(1) translate(-19.5em, -8em);
     }
   }
 
@@ -161,7 +161,7 @@
     border-top-right-radius: 5em;
     border-bottom-left-radius: 5em;
     padding: 10em 0;
-    padding-bottom: 7.5rem;
+    padding-bottom: 7.5em;
     background-image: linear-gradient(
       162deg,
       rgba(44, 45, 63, 1) 13%,
@@ -174,8 +174,6 @@
 
     @include media($bp-large) {
       border: unset;
-      // padding: 10em 0;
-      // padding-bottom: 8.5rem;
       padding: 0;
       background-image: linear-gradient(
         162deg,
@@ -185,13 +183,13 @@
       position: relative;
       z-index: 800;
       overflow: hidden;
-      // margin-bottom: 6em;
       margin: 0;
       background: unset;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
+      padding-bottom: 6.5em;
     }
 
     &::after {
@@ -222,13 +220,35 @@
     }
   }
 
+  &__content-wrapper--laptop {
+    @include media($bp-large) {
+      margin: 10em 0;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
   &__img-container--laptop {
     width: 100%;
     margin-bottom: 2.5em;
+    transform: scale(1.3);
+    @include media($bp-large) {
+      flex: 1;
+      transform: translateX(-8.5em) scale(1.4);
+    }
   }
 
   &__img--laptop {
-    width: 100%;
-    transform: scale(1.3);
+    @include media($bp-large) {
+      content: url('/src/images/illustration-laptop-desktop.svg');
+    }
+  }
+
+  &__text-content-wrapper--laptop {
+    @include media($bp-large) {
+      background-color: chocolate;
+      flex: 1;
+      transform: translateX(-1em);
+    }
   }
 }
