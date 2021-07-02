@@ -16,6 +16,9 @@
   overflow: hidden;
 
   @include media($bp-large) {
+    padding: 3.57em 0 3em 0;
+    // margin-bottom: 10em;
+    padding-bottom: 5.5em;
     background: rgb(255, 143, 112);
     background: linear-gradient(
       94deg,
@@ -23,8 +26,6 @@
       rgba(255, 107, 100, 1) 32%,
       rgba(255, 61, 84, 1) 94%
     );
-    margin-bottom: 3em;
-    padding-bottom: 3em;
   }
 
   &::after {
@@ -49,7 +50,7 @@
       transform: scale(5.2);
       top: -7em;
       left: 52em;
-      max-width: 550px;
+      max-width: 600px;
     }
   }
 }
@@ -76,7 +77,10 @@
   &__logo-container {
     @include media($bp-large) {
       margin: 0 4em;
-      transform: translateX(-10em);
+      transform: translateX(-18.3em);
+      &:first-child {
+        margin-left: 1em;
+      }
     }
   }
 
@@ -140,6 +144,14 @@
     }
   }
 
+  &__item--drop-down {
+    @include media($bp-large) {
+      transform: translateX(-6.5em);
+      margin: 1em;
+      margin-right: 2em;
+    }
+  }
+
   &__item-header {
     cursor: pointer;
     margin-top: -0.5em;
@@ -177,7 +189,7 @@
       flex-direction: column;
       padding: 1em 0;
       margin: 1.5em 0;
-      width: 130px;
+      width: 117px;
       background-color: $white;
       transform: translateX(-1em);
     }
@@ -213,7 +225,9 @@
       justify-content: center;
       margin-left: 5em;
       margin-right: -10em;
-      margin-top: 5px;
+      margin-top: 3px;
+      transform: translateX(10.7em);
+      font-weight: 900;
     }
   }
 
@@ -284,6 +298,7 @@ summary {
   font-family: $overpass;
   color: $white;
   z-index: 700;
+  transform: translateY(2.7em);
   @include media($bp-large) {
     margin: 5em 2em;
   }
