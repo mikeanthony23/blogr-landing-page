@@ -1,6 +1,6 @@
 # Hi! Welcome to Blogr Landing Page
-
-![readme-design](https://user-images.githubusercontent.com/82145849/122960884-6fe94800-d3b6-11eb-8507-788ab1abf100.png)
+##Live Preview
+![live-previewlive-preview](https://user-images.githubusercontent.com/82145849/124360805-57064f80-dc5e-11eb-97fb-a1a067b0f4eb.png)
 
 ### Built with
 
@@ -9,4 +9,4 @@
 - Mobile-first workflow
 - Javascript
 
-### Credits to Frontend Mentor for the design
+### Credits to Frontend Mentor for this challenge!
