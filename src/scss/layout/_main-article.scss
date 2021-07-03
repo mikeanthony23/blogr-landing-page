@@ -99,7 +99,10 @@
       grid-template-areas: 'text image';
       justify-content: center;
       align-items: center;
-      margin-bottom: 15em;
+      margin-bottom: 0em;
+    }
+    @include media($bp-extra-medium) {
+      margin-bottom: 7em;
     }
     @include media($bp-large) {
       margin: 0 5em;
@@ -139,6 +142,9 @@
   }
 
   &__content-wrapper--phone {
+    @include media($bp-extra-medium) {
+      transform: translateY(-3.8em);
+    }
     @include media($bp-large) {
       margin: 3em 0;
       transform: translateY(-5.8em);
@@ -151,6 +157,10 @@
       );
       position: relative;
       z-index: 800;
+    }
+
+    @include media($bp-extra-medium) {
+      transform: translateY(-5.8em);
     }
   }
 
@@ -166,20 +176,21 @@
   &__img-container--phone {
     margin-top: 4em;
     margin-bottom: -13em;
+    margin: 4em auto -13em auto;
     position: relative;
     z-index: 900;
+
+    max-width: 552px;
     @include media($bp-large) {
       position: absolute;
       transform: scale(1) translate(-19.5em, -8em);
     }
   }
 
-  &__img--phone {
-    @include media($bp-large) {
-    }
-  }
-
   &__text-content-wrapper--phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-top-right-radius: 5em;
     border-bottom-left-radius: 5em;
     padding: 10em 0;
@@ -193,6 +204,15 @@
     z-index: 800;
     overflow: hidden;
     margin-bottom: 6em;
+
+    @include media($bp-medium) {
+      padding-bottom: 3.5em;
+      margin-bottom: 0em;
+    }
+
+    @include media($bp-extra-medium) {
+      margin-bottom: 5em;
+    }
 
     @include media($bp-large) {
       border: unset;
@@ -210,6 +230,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 6em;
     }
 
     &::after {
@@ -232,18 +253,26 @@
     color: $white;
     font-weight: 300;
     margin: 0 1.5em;
+    text-align: center;
+    @include media($bp-medium) {
+      width: 70%;
+      margin: auto;
+      padding-bottom: 0;
+    }
+
     @include media($bp-large) {
-      transform: translate(44.5em, -1.5em);
+      transform: translate(45em, -1.5em);
       margin-right: 55em;
       padding: 5em 0;
       padding-bottom: 5.5em;
+      width: 40%;
+      text-align: left;
     }
   }
 
   &__content-wrapper--laptop {
     @include media($bp-medium) {
-      margin: 6em 0;
-      margin-bottom: 11em;
+      margin: 0;
       display: flex;
       flex-direction: row;
       transform: translateY(4em);
@@ -251,10 +280,12 @@
       flex-direction: row;
       align-items: center;
     }
-    @include media($bp-large) {
-      margin: 6em 0;
-      margin-bottom: 11em;
 
+    @include media($bp-extra-medium) {
+      margin-bottom: 7em;
+    }
+    @include media($bp-large) {
+      margin-bottom: 11em;
       transform: translateY(4em);
     }
   }
