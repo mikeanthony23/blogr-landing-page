@@ -15,7 +15,7 @@
 
 <body>
   <header class="header ">
-    <nav class="nav">
+    <nav aria-labelledby="" class="nav">
       <figure class="nav__logo-container ">
         <a href="#"><img class="nav__logo" src="src/images/logo.svg" alt="blogr logo"></a>
       </figure>
@@ -29,12 +29,12 @@
             <summary>
               <h3 class="nav__item-header">Product<span class="arrow-icon"></span></h3>
             </summary>
-            <ul class="nav__sub-list ">
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Overview</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Pricing</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Marketplace</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Features</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Integrations</a></li>
+            <ul class="nav__sub-list">
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Overview</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Pricing</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Marketplace</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Features</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Integrations</a></li>
             </ul>
           </details>
         </li>
@@ -44,10 +44,10 @@
               <h3 class="nav__item-header">Company<span class="arrow-icon"></span></h3>
             </summary>
             <ul class="nav__sub-list">
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">About</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Team</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Blog</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Careers</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">About</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Team</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Blog</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Careers</a></li>
             </ul>
           </details>
         </li>
@@ -57,16 +57,16 @@
               <h3 class="nav__item-header">Connect<span class="arrow-icon"></span></h3>
             </summary>
             <ul class="nav__sub-list">
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Contact</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">Newsletter</a></li>
-              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="">LinkedIn</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Contact</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">Newsletter</a></li>
+              <li class="nav__sub-list-item"><a class="nav__sub-list-link" href="#">LinkedIn</a></li>
             </ul>
           </details>
         </li>
         <li class="nav__item ">
           <ul class="nav__login-signup">
-            <li class="nav__item-account"><a class="log-in-link">Login</a></li>
-            <li class="nav__item-account"><a class="sign-up-link">Sign Up</a></li>
+            <li class="nav__item-account"><a href="#" class="log-in-link">Login</a></li>
+            <li class="nav__item-account"><a href="#" class="sign-up-link">Sign Up</a></li>
           </ul>
         </li>
       </ul>
@@ -144,38 +144,39 @@
     </article>
   </main>
   <footer class="footer">
-    <nav class="footer__wrapper">
-      <figure class="footer__logo-container"><img class="footer__logo" src="./src/images/logo.svg" alt=""></figure>
+    <div class="footer__wrapper">
+      <figure class="footer__logo-container"><img class="footer__logo" src="./src/images/logo.svg" alt="logo image">
+      </figure>
       <ul class="footer-nav">
         <li class="footer-nav__items">
           <ul class="footer-header-nav">
             <li class="footer-nav__header footer-nav__header--product">Product</li>
-            <li class=" footer-header-nav__items"><a class="footer-header-nav__links" href="">Overview</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Pricing</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Marketplace</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Features</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Integrations</a></li>
+            <li class=" footer-header-nav__items"><a class="footer-header-nav__links" href="#">Overview</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Pricing</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Marketplace</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Features</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Integrations</a></li>
           </ul>
         </li>
         <li class="footer-nav__items">
           <ul class="footer-header-nav footer-header-nav--company">
             <li class="footer-nav__header"> Company </li>
-            <li class=" footer-header-nav__items"><a class="footer-header-nav__links" href="">About</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Team</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Blog</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Careers</a></li>
+            <li class=" footer-header-nav__items"><a class="footer-header-nav__links" href="#">About</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Team</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Blog</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Careers</a></li>
           </ul>
         </li>
         <li class="footer-nav__items">
           <ul class="footer-header-nav footer-header-nav--connect">
             <li class="footer-nav__header"> Connect </li>
-            <li class=" footer-header-nav__items"><a class="footer-header-nav__links" href="">Contact</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">Newsletter</a></li>
-            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="">LinkedIn</a></li>
+            <li class=" footer-header-nav__items"><a class="footer-header-nav__links" href="#">Contact</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">Newsletter</a></li>
+            <li class="footer-header-nav__items"><a class="footer-header-nav__links" href="#">LinkedIn</a></li>
           </ul>
         </li>
       </ul>
-    </nav>
+    </div>
   </footer>
 </body>
 
