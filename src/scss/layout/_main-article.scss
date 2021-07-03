@@ -103,6 +103,7 @@
     }
     @include media($bp-extra-medium) {
       margin-bottom: 7em;
+      margin: 0 auto 7em 1.5em;
     }
     @include media($bp-large) {
       margin: 0 5em;
@@ -169,7 +170,7 @@
     font-size: 2.5rem;
     line-height: 1.2;
     @include media($bp-large) {
-      transform: translate(7em, 2em);
+      transform: translate(7.2em, 2em);
     }
   }
 
@@ -261,11 +262,12 @@
     }
 
     @include media($bp-large) {
-      transform: translate(45em, -1.5em);
-      margin-right: 55em;
+      transform: translate(43em, -1.5em);
+      margin-right: 52.2em;
+      margin-left: 2em;
       padding: 5em 0;
       padding-bottom: 5.5em;
-      width: 40%;
+      width: 37%;
       text-align: left;
     }
   }
@@ -283,6 +285,7 @@
 
     @include media($bp-extra-medium) {
       margin-bottom: 7em;
+      margin: 0 0.5em 7em auto;
     }
     @include media($bp-large) {
       margin-bottom: 11em;

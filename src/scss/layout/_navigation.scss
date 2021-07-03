@@ -15,9 +15,8 @@
     'intro intro';
   overflow: hidden;
 
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     padding: 3.57em 0 3em 0;
-    // margin-bottom: 10em;
     padding-bottom: 5.5em;
     background: rgb(255, 143, 112);
     background: linear-gradient(
@@ -46,7 +45,7 @@
     max-width: 1000px;
     margin: auto;
 
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       transform: scale(5.2);
       top: -7em;
       left: 52em;
@@ -65,7 +64,7 @@
   position: relative;
   z-index: 2000;
 
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     padding: 3em 10.5em;
     justify-content: center;
     position: static;
@@ -75,7 +74,7 @@
   }
 
   &__logo-container {
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       margin: 0 4em;
       transform: translateX(-18.3em);
       &:first-child {
@@ -93,7 +92,7 @@
   &__burger-menu-container {
     cursor: pointer;
     z-index: 1000;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       display: none;
     }
   }
@@ -117,7 +116,7 @@
     box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 1);
     animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       position: static;
       flex-direction: row;
       margin: 0;
@@ -138,14 +137,14 @@
     font-family: $overpass;
     font-weight: 600;
     color: $very-dark-blue;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       margin: 0 2em;
       color: $light-gray;
     }
   }
 
   &__item--drop-down {
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       transform: translateX(-6.5em);
       margin: 1em;
       margin-right: 2em;
@@ -156,7 +155,7 @@
     cursor: pointer;
     margin-top: -0.5em;
     padding: 0;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       color: rgb(233, 230, 230);
       &:hover {
         color: $white;
@@ -172,7 +171,7 @@
     margin-left: -1px;
     margin-top: 2px;
     padding: 5px;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       content: url('/src/images/icon-arrow-light.svg');
     }
   }
@@ -182,7 +181,7 @@
     padding: 0.5em;
     margin: 1em 1.5em;
     background-color: $dark-gray;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -197,14 +196,14 @@
 
   &__sub-list-item {
     margin: 1.5em;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       margin: 0.5em 2em;
     }
   }
 
   &__sub-list-link {
     color: $nav-color;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       color: $very-dark-blue;
       margin-left: -1em;
     }
@@ -216,7 +215,7 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       flex-direction: row;
       margin: 0;
       padding: 0;
@@ -239,7 +238,7 @@
 details {
   max-height: 100px;
   transition: all 550ms ease-out;
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     max-height: 0;
     height: 0;
     padding: 0;
@@ -250,7 +249,7 @@ details {
 details[open] {
   color: $nav-color;
   max-height: 500px;
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     max-height: 0;
     height: 0;
     padding: 0;
@@ -277,7 +276,7 @@ summary {
   border-radius: 1.8em;
   color: $white;
   cursor: pointer;
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     background: $white;
     color: $light-red;
     background-color: $white;
@@ -299,7 +298,7 @@ summary {
   color: $white;
   z-index: 700;
   transform: translateY(2.7em);
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     margin: 5em 2em;
   }
   & h1 {
@@ -307,7 +306,7 @@ summary {
     font-weight: 600;
     margin: auto;
     font-size: 2.2rem;
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       font-size: 3.76rem;
     }
   }
@@ -318,7 +317,7 @@ summary {
     color: $light-gray;
     font-size: 1.25rem;
 
-    @include media($bp-large) {
+    @include media($bp-nav-large) {
       margin: 0.7em;
 
       font-size: 1.25rem;
@@ -368,7 +367,7 @@ summary {
 
 .hidden {
   display: none;
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     display: flex;
   }
 }
@@ -382,7 +381,7 @@ summary {
   background: pink;
   opacity: 0;
   z-index: 800;
-  @include media($bp-large) {
+  @include media($bp-nav-large) {
     display: none;
   }
 }
