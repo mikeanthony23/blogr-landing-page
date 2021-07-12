@@ -27,7 +27,7 @@ const openCloseMenu = function () {
       : (btn.src = `${iconBurger}`);
   });
 };
-openCloseMenu();
+
 
 const closeMenuOverlay = function () {
   overlay.addEventListener('click', function (e) {
@@ -37,7 +37,7 @@ const closeMenuOverlay = function () {
     return (menuBtn.src = `${iconBurger}`);
   });
 };
-closeMenuOverlay();
+
 
 const rotateArrow = function () {
   const header = Array.from(navHeader);
@@ -49,4 +49,10 @@ const rotateArrow = function () {
     });
   });
 };
-rotateArrow();
+
+const init = function(){
+  openCloseMenu();
+  closeMenuOverlay();
+  rotateArrow();
+}
+init();
